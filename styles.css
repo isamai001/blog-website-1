@@ -1,0 +1,266 @@
+/* General Page Shadow */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #030303;
+    background-color: #f0f8ff; /* Light blue-tinted background */
+    line-height: 1.8;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1), 
+                0px 5px 15px rgba(0, 0, 0, 0.2); /* Light shadow at edges */
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #0072ff, #0048b3); /* Vibrant gradient */
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid #00509e;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin: 0.5rem 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); 
+}
+
+/* Navigation */
+nav {
+    background: #040404;
+    padding: 1rem;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #66ccff;
+    color: #003366;
+}
+
+/* Section Styles (Default for All Pages) */
+section {
+    padding: 3rem;
+    margin: 2.5rem auto;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 1100px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+section h2 {
+    color: #00509e;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Centered by default */
+    border-left: none;
+}
+
+/* Login/Sign-Up and Contact Page */
+form {
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form h2 {
+    text-align: center;
+    color: #00509e;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333333;
+}
+
+form input, form textarea, form button {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #00509e;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 80, 158, 0.5);
+}
+
+form button {
+    background: linear-gradient(90deg, #0072ff, #00509e);
+    color: #ffffff;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+    background: #003366;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Blog Page */
+.blog-page {
+    padding: 3rem 2rem;
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.blog-page h2 {
+    text-align: center; /* Centered headings */
+    color: #00509e;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.blog-post {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons (Global) */
+button {
+    background: linear-gradient(90deg, #0072ff, #00509e);
+    border: none;
+    padding: 1rem 2rem;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+    background: #0048b3;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+/* Footer Styles */
+footer {
+    background: linear-gradient(90deg, #003366, #00509e); /* Vibrant gradient */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.2); /* Shadow for elevation */
+    margin-top: 3rem; /* Space above the footer */
+    border-top: 5px solid #66ccff; /* Blue border for visual separation */
+    position: relative; /* Relative positioning for internal alignment */
+}
+
+/* Footer Text */
+footer p {
+    font-size: 1rem;
+    margin: 0;
+    color: #dcdcdc; /* Softer text color for contrast */
+    margin-bottom: 1rem; /* Space below the copyright text */
+}
+
+/* Footer Links Container */
+footer div {
+    font-size: 1.1rem; /* Slightly larger font for links */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* Spacing between links */
+    flex-wrap: wrap; /* Wrap links on smaller screens */
+}
+
+/* Footer Links */
+footer a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth effects */
+}
+
+footer a:hover {
+    color: #66ccff; /* Light blue on hover */
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    footer div {
+        flex-direction: column; /* Stack links vertically on small screens */
+        gap: 1rem; /* Adjust spacing */
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Slightly smaller font on smaller devices */
+    }
+}
